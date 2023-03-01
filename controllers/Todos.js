@@ -13,12 +13,15 @@ const updateTodo = async (req, res) => {
     res.send(todo);
 }
 
-const deleteTodo = (req, res) => {
-
+const deleteTodo = async (req, res) => {
+    const { id } = req.params;
+    const todo = await Todos.findByIdAndDelete(id);
+    res.send(todo);
 }
 
-const getTodos = (req, res) => {
-
+const getTodos = async (req, res) => {
+    const todos = await Todos.find({});
+    res.send(todos);
 }
 
 module.exports = { addTodo, updateTodo, deleteTodo, getTodos };

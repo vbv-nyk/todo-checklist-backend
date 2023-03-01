@@ -2,16 +2,23 @@ POST http://localhost:3000/Todos HTTP/1.1
 Content-Type: application/json
 
 {
-    "title" : "Todo 1", 
+    "title" : "Todo 2", 
     "link": "google.com",
     "iconURL": "",
     "note": "Hello World :)"
 }
 
 ###
-PUT http://localhost:3000/Todos/63ff3172449ef60650cc4772
+PUT http://localhost:3000/Todos/63ff3453c9272edf5965d7f6
 Content-Type: application/json
 
 {
-    "title": "Renamed Todo 1"
+    "title": "Renamed Todo 3"
 }
+
+###
+DELETE http://localhost:3000/Todos/63ff3172449ef60650cc4772
+Content-Type: application/json
+
+###
+GET http://localhost:3000/Todos

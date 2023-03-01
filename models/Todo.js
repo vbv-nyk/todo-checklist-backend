@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const noteSchema = new Schema({
+const todoSchema = new Schema({
     title: { type: String, require: true, },
     link: { type: String, },
     iconURL: { type: String, },
@@ -9,4 +9,4 @@ const noteSchema = new Schema({
     date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("Note", noteSchema);
+module.exports = mongoose.model("Todo", todoSchema);

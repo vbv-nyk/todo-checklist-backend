@@ -1,9 +1,17 @@
 const Todos = require("../models/Todo")
 
-const addNote = (req, res) => {
+const addTodo = (req, res) => {
 
 }
 
-const updateNote = (req, res) => {
+const updateTodo = (req, res) => {
+
+}
+
+const deleteTodo = (req, res) => {
+
+}
+
+const getTodos = (req, res) => {
 
 }

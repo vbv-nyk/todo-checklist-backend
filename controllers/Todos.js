@@ -6,8 +6,11 @@ const addTodo = async (req, res) => {
     res.send(todo);
 }
 
-const updateTodo = (req, res) => {
-
+const updateTodo = async (req, res) => {
+    const { title, link, iconURL, note } = req.body;
+    const { id } = req.params;
+    const todo = await Todos.findByIdAndUpdate(id, { title, link, iconURL, note });
+    res.send(todo);
 }
 
 const deleteTodo = (req, res) => {

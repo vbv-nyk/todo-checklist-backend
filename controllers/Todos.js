@@ -7,9 +7,9 @@ const addTodo = async (req, res) => {
 }
 
 const updateTodo = async (req, res) => {
-    const { title, link, iconURL, note } = req.body;
+    const { title, link, iconURL, note, done } = req.body;
     const { id } = req.params;
-    const todo = await Todos.findByIdAndUpdate(id, { title, link, iconURL, note });
+    const todo = await Todos.findByIdAndUpdate(id, { title, link, iconURL, note, done });
     res.send(JSON.stringify(todo));
 }
 

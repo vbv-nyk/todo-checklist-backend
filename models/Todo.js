@@ -6,7 +6,8 @@ const todoSchema = new Schema({
     link: { type: String, default: "" },
     iconURL: { type: String, },
     note: { type: String, require: true },
-    date: { type: Date, default: Date.now }
+    date: { type: Date, default: Date.now },
+    done: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model("Todo", todoSchema);
